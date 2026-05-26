@@ -1,0 +1,134 @@
+.resources-page {
+  padding-bottom: 1rem;
+}
+
+.resource-hero {
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(26, 16, 40, 0.96), rgba(18, 9, 31, 0.82));
+  box-shadow: var(--shadow-soft);
+}
+
+.resource-hero h1 {
+  margin-bottom: 1rem;
+}
+
+.resource-hero p {
+  max-width: 72ch;
+  color: var(--color-muted);
+}
+
+.resource-search {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 520px;
+  margin-top: 1.35rem;
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+.resource-search input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  padding: 0.85rem 1rem;
+  font: inherit;
+}
+
+.resource-search input:focus {
+  outline: 2px solid rgba(68, 196, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.resources-list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.section {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(26, 16, 40, 0.78);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.section[hidden] {
+  display: none;
+}
+
+.section-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+  padding: 1rem 1.2rem;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 850;
+  text-align: left;
+  cursor: pointer;
+}
+
+.section-toggle:hover,
+.section-toggle:focus-visible {
+  background: rgba(135, 67, 193, 0.18);
+  outline: none;
+}
+
+.file-list {
+  display: none;
+  padding: 0 1rem 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.file-list.visible {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.72rem 0.9rem;
+  border: 1px solid rgba(200, 164, 255, 0.12);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.file-item a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.file-item a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.download::after {
+  content: " ⇩";
+}
+
+@media (max-width: 760px) {
+  .resource-hero {
+    padding: 1.25rem;
+  }
+
+  .file-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
